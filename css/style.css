@@ -1,0 +1,91 @@
+*{
+	margin: 0;
+	padding: 0;
+	/*height:100%;*/
+}
+
+body{
+	display: flex;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+	background-image: url("../img/SpaceStars.png");
+
+}
+
+
+
+section{
+	background-color: #fad390;
+	width: 80vw;
+	height: 50vh;
+	margin: auto auto;
+	padding: 5%;
+	text-align: center;
+	border: 2px solid #A04345;
+	border-radius: 15px;
+}
+
+/* Texte */
+h1{
+	font-size: 8em;
+	font-style: normal;
+}
+h2{
+	font-weight: normal;
+	font-size: 2.5em;
+}
+p{
+	font-size: 1em;
+	padding-top: 20px;
+}
+a{
+	padding: 5px;
+	font-size: 1.5em;
+	color: #A04345;
+	text-decoration: none;
+	border: 2px solid #A04345;
+	border-radius: 15px;
+}
+a:hover{
+	background-color: #d17d7e;
+}
+
+/*animation Error 404*/
+.error{
+	display: inline-block;
+	color: #A04345;
+	animation: error 1s forwards;
+}
+@keyframes error{
+	0%{transform: translateY(-50%);
+		opacity: 0;}
+	100%{transform: translateY(0%);
+		opacity: 1;}
+}
+
+/* Animation Dino*/
+.dino{
+	margin: 0 auto;
+	padding: 5px;
+	height: 192px;
+	width:192px;
+	display: block;
+	background-image: url("../img/DinoSprites.png");
+	background-position: -768px;
+	animation: walk 1s steps(6) infinite;
+}
+.dino:hover{
+	animation: run 0.5s steps(6) infinite;
+}
+
+@keyframes walk{
+	from{background-position-x:-768px;}
+	to{background-position-x:-1920px }
+}
+
+@keyframes run{
+	from{background-position-x:-3456px;}
+	to{background-position-x:-4608px }
+}
+
+/* colors red-light: #BC4D4F red-dark: #A04345*/
